@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="../public/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>Instructions</title>
+  </head>
+  <body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img src="images/favicon.png" alt="logo" width="80" height="80" />
+          </a>
+        </header>
+    </div>
+    <div class="container" id="homeImg">
+        <div class="row">
+          <div class="col-7">
+            <div class="row">
+              <h1 class="bg-primary text-white">Guide of how to play the game</h1>
+            </div>
+            <div class="border mt-3 border border-dark rounded">
+                <ul class="list-unstyled mx-4 ">
+                    <h3 class="mt-3 text-light bg-dark">Create a new game</h3>
+                    <li>
+                      <p class= "mt-3 bg-info text-black"> 
+                        In order to play a game, you need to use an API client like Postman or others to
+                        create and save HTTP/s requests, as well as read their responses. 
+                        <br> There's a Postman link at the end of the page if you'd like to use it.
+                      </p>
+                  </li>
+                    <li>
+                        <p class= "mt-3"> 
+                          First, you would like to create a new game. You need to use the following url: <b>/createGame</b>
+                          and send the JSON data in the body of the POST request like this:
+                          <br><br>{ "gamers":[ {"name": "gamer1", "bet" : 1}, <br>
+                          {"name": "gamer1", "bet" : 2}, <br>{"name": "gamer1", "bet" : 3} ] }
+                        </p>
+                    </li>
+                    <p class="mt-2 text-light bg-dark">Display all games information</p>
+                    <li>
+                      <p>If you want to see the information about all games that have been created, 
+                        started and finished, you must use the following url: <b>/allGames</b> and send a GET request. 
+                      </p>
+                    </li>
+                    <p class="mt-2 text-light bg-dark">Display game informationby its ID</p>
+                    <li>
+                        <p>If you want to get a game by its ID, please enter the id of the game you want to get
+                          after <b>/:id</b> and then send a GET request.
+                        </p>
+                    </li>
+                    <p class="mt-2 text-light bg-dark">Start a game its ID</p>
+                    <li class="mt-2">
+                      <p>If you want to start a Game, you need to use the following url: <b>/startGame</b>
+                        and send the JSON ID of the game you want to start in the body of the POST request like this:
+                        <br><br>{ "id": {"game id"} }.
+                        <br><br> It will start the game by changing inProgress parameter to true.
+                      </p>
+                    </li>
+                    <p class="mt-2 text-light bg-dark">Get a winner</p>
+                    <li class="mt-2">
+                        <p>And finally, if you want to get a ramdom winner from a game, please enter the id of the game you want to get
+                          a winner from after the word winner like this: <b>winner/:id</b> and then send a GET request.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://www.postman.com/">
+                <button type="button" class="btn btn-primary my-4 ml-5">Postman</button>
+            </a>
+          </div>
+          <div class="col-5">
+            <img src="images/logo.svg" alt="home" class="d-flex align-items-center"/>
+          </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
