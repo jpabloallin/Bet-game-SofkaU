@@ -9,13 +9,6 @@ const router = express.Router();
 const gameController = require('../controllers/gameControllers')
 
 /**
- * GET page with instructions 
- */ 
-// router.get('/', function(req, res, next) {
-//     res.render('instructions')
-//   });
-
-/**
  * Create game with players and bets.
  */
 router.post('/', gameController.createGame);
